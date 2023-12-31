@@ -1,6 +1,7 @@
 import requests
 import re
 import random
+"""fetching all the urls"""
 def answer(n: int=1, url: str='https://httpbin.org'):
     get_object = requests.get('https://httpbin.org')
     total_urls = re.findall('["\'](https?://\S+)["\']', get_object.text)
